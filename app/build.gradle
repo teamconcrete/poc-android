@@ -16,6 +16,7 @@ android {
     }
     buildTypes {
         debug {
+            shrinkResources true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -33,6 +34,18 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation "com.android.support:appcompat-v7:$support_version"
     implementation "com.android.support:recyclerview-v7:$support_version"
+
+    // Play Services
+        implementation 'com.google.android.gms:play-services-wallet:11.6.0'
+
+    // Kodein
+    implementation "com.github.salomonbrys.kodein:kodein:$kodein_version"
+    implementation "com.github.salomonbrys.kodein:kodein-android:$kodein_version"
+
+    // Retrofit
+//    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+//    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+//    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
 
     testImplementation 'junit:junit:4.12'
 
