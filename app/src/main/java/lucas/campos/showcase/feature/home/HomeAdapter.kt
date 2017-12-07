@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.adapter_home.view.*
 import lucas.campos.showcase.R
 import lucas.campos.showcase.data.model.Product
@@ -30,8 +31,8 @@ class HomeAdapter(private val products: List<Product>, private val clickListener
         fun bindView(product: Product, clickListener: () -> Unit) {
             itemView.apply {
                 name.text = product.name
-                category.text = product.category
-                price.text = product.price.toString()
+                description.text = product.description
+                Glide.with(context).load(product.imageUrl).into(photo)
                 itemView.setOnClickListener { clickListener() }
             }
         }
