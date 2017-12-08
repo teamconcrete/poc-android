@@ -33,7 +33,7 @@ class HomeAdapter(private val products: List<Product>, private val clickListener
                 name.text = product.name
                 description.text = product.description
                 Glide.with(context).load(product.imageUrl).into(photo)
-                itemView.setOnClickListener { clickListener() }
+                buy.setOnClickListener { clickListener() }
             }
         }
 

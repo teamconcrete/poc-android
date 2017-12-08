@@ -16,6 +16,7 @@ class HomeViewModel : ViewModel() {
 
     private val disposable = CompositeDisposable()
     var behavior = MutableLiveData<HomeBehavior>()
+    //expor somente o LiveData e não o MutableLiveData
 
     fun fetchData() {
         disposable.add(
