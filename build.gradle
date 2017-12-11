@@ -39,5 +39,7 @@ detekt {
         input = "$projectDir/app"
         config = "$projectDir/showcase-detekt-config.yml"
         filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
+        output = "$projectDir/reports"
+        outputName = "detekt-report.xml"
     }
 }
